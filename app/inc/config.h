@@ -91,7 +91,7 @@
 
 // SPI 활성화
 #define SPI1_ENABLE			false
-#define SPI2_ENABLE			false
+#define SPI2_ENABLE			true
 #define SPI3_ENABLE			false
 
 // TIMER 활성화

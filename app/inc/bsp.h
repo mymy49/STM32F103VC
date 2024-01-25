@@ -26,5 +26,8 @@
 
 void initializeBoard(void);
 
+#include <mod/wiznet/W5100S.h>
+#include <mod/wiznet/WiznetSocket.h>
+
 #endif
 
