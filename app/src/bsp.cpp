@@ -33,6 +33,9 @@ void initializeBoard(void)
 {
 	using namespace define::gpio;
 
+	// LED 초기화
+	Led::initialize();
+
 	// SPI2 초기화
 	gpioB.setAsAltFunc(13, altfunc::PB13_SPI2_SCK, ospeed::FAST);
 	gpioB.setAsAltFunc(14, altfunc::PB14_SPI2_MISO, ospeed::FAST);
@@ -86,10 +89,7 @@ void initializeBoard(void)
 
 		w5100s.setIpConfig(ipconfig);
 	}
-	else
-	{
-		while(1);
-	}
+
 	w5100s.unlock();
 	
 	// 소켓 초기화

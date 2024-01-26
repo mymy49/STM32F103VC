@@ -21,15 +21,17 @@
 	WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#ifndef BSP__H_
-#define BSP__H_
+#ifndef DEV_LED__H_
+#define DEV_LED__H_
 
-void initializeBoard(void);
+#include <stdint.h>
 
-#include <mod/wiznet/W5100S.h>
-#include <mod/wiznet/WiznetSocket.h>
-
-#include <dev/led.h>
+namespace Led
+{
+	void initialize(void);
+	
+	void setColor(uint8_t r, uint8_t g, uint8_t b);
+}
 
 #endif
 
